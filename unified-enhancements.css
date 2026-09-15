@@ -1,0 +1,19 @@
+:root{--accent:#f6c515;--ink:#111;--ease:cubic-bezier(.22,1,.36,1)}
+html{scroll-behavior:smooth}.site-page{opacity:1;transform:none;transition:opacity .45s var(--ease),transform .45s var(--ease)}.site-page.is-ready{opacity:1;transform:none}.site-page.is-leaving{opacity:0;transform:translateY(-8px)}
+/* Strong hierarchy everywhere */
+h1{font-size:clamp(3.8rem,8vw,8.8rem)!important;line-height:.9!important;letter-spacing:-.055em!important}h2{font-size:clamp(2.2rem,4.7vw,5rem)!important;line-height:.98!important;letter-spacing:-.045em!important}h3{font-size:clamp(1.15rem,2vw,1.65rem)!important}p,.course-description,.area-copy{font-size:clamp(1rem,1.15vw,1.18rem);line-height:1.75}
+/* Consistent premium interaction */
+a,button,.button,.course-card,.area-card,.benefit-card,.faq-item{transition:transform .45s var(--ease),box-shadow .45s var(--ease),background .35s ease,color .35s ease,border-color .35s ease!important}.button:hover,button:hover{transform:translateY(-4px) scale(1.015);box-shadow:0 18px 40px rgba(246,197,21,.2)}.course-card:hover,.area-card:hover,.benefit-card:hover{transform:translateY(-10px);box-shadow:0 26px 70px rgba(0,0,0,.16)}
+.area-card{position:relative;overflow:hidden}.area-card:after,.course-card:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.12),transparent 70%);transform:translateX(-120%);transition:transform .75s var(--ease);pointer-events:none}.area-card:hover:after,.course-card:hover:after{transform:translateX(120%)}
+nav a{position:relative}nav a:after{content:"";position:absolute;left:0;bottom:-7px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}nav a:hover:after{transform:scaleX(1);transform-origin:left}
+@media(max-width:700px){h1{font-size:clamp(3rem,15vw,5rem)!important}h2{font-size:clamp(2rem,10vw,3.2rem)!important}.course-card:hover,.area-card:hover,.benefit-card:hover{transform:translateY(-5px)}}
+
+/* Final connected-site polish */
+html{scroll-behavior:smooth}body{transition:opacity .32s cubic-bezier(.22,.8,.2,1),transform .32s cubic-bezier(.22,.8,.2,1)}body.is-leaving{opacity:0;transform:translateY(10px)}
+.navlinks a,.mobile-panel a{transition:color .28s ease,transform .28s ease}.navlinks a:hover,.mobile-panel a:hover{color:#d7ad00}
+.area-card,.course,.benefit,.course-card,.benefit-card{will-change:transform;transition:transform .38s cubic-bezier(.22,.8,.2,1),box-shadow .38s cubic-bezier(.22,.8,.2,1),background .38s ease,border-color .38s ease}
+.area-card:hover,.course:hover,.benefit:hover,.course-card:hover,.benefit-card:hover{box-shadow:0 24px 70px rgba(0,0,0,.16)}
+.button,.btn,.nav-cta,.submit-button{transition:transform .28s cubic-bezier(.22,.8,.2,1),box-shadow .28s ease,background .28s ease}.button:hover,.btn:hover,.nav-cta:hover,.submit-button:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.16)}
+@media(max-width:900px){.cursor{display:none!important}}
+
+.cursor-label,.cursor-text,.view-label{display:none!important}
