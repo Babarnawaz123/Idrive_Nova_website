@@ -12,3 +12,83 @@
 .hero:before{z-index:1}.road{z-index:1}.hero-inner{z-index:3}
 .hero-photo-tag{position:absolute;right:clamp(24px,5vw,80px);bottom:34px;z-index:3;padding:10px 14px;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.28);backdrop-filter:blur(12px);color:#fff;font-size:10px;letter-spacing:.13em;text-transform:uppercase}
 @media(max-width:900px){.hero:after{width:100%;opacity:.52;background-position:center}.hero:before{background:linear-gradient(90deg,rgba(13,13,14,.94),rgba(13,13,14,.72)),linear-gradient(110deg,transparent 0 54%,rgba(242,194,17,.06) 54% 55%,transparent 55% 64%,rgba(255,255,255,.04) 64% 65%,transparent 65%)}}
+
+/* =========================================================
+   REFERENCE HERO — shared by Areas Served + every city page
+   Visual direction follows the supplied customer reference:
+   warm ivory background, large solid/outline/solid headline.
+========================================================= */
+.reference-hero{
+  min-height:690px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 72% 82%,rgba(242,194,17,.24),transparent 34%),
+    linear-gradient(135deg,#fbfbf7 0%,#f5f3e8 58%,#efe9c9 100%);
+  color:#101112;
+  border-top:4px solid #22383b;
+  border-left:3px solid #22383b;
+}
+.reference-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:linear-gradient(rgba(23,42,45,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(23,42,45,.025) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.45),transparent 78%);
+  pointer-events:none;
+}
+.reference-hero::after{display:none!important}
+.reference-hero .reference-hero-glow{position:absolute;width:520px;height:520px;right:-110px;bottom:-290px;border-radius:50%;background:radial-gradient(circle,rgba(242,194,17,.28),rgba(242,194,17,.07) 46%,transparent 70%);filter:blur(8px);pointer-events:none}
+.reference-hero .hero-inner{position:relative;z-index:2;padding:132px 0 88px}
+.reference-hero .crumb{color:#777b75;margin-bottom:22px}
+.reference-hero .crumb a{color:#41433f}
+.reference-hero .eyebrow{color:#1b1d1d;font-size:10px;font-weight:800;letter-spacing:.17em}
+.reference-hero .dot{background:#f2c211;box-shadow:0 0 0 6px rgba(242,194,17,.14)}
+.reference-hero-title{
+  margin:62px 0 26px!important;
+  max-width:920px!important;
+  font-family:var(--display)!important;
+  font-size:clamp(74px,9.3vw,142px)!important;
+  line-height:.79!important;
+  letter-spacing:-.085em!important;
+  font-weight:800!important;
+}
+.reference-hero-title span{display:block}
+.reference-hero-title .solid-line{color:#0b0c0d}
+.reference-hero-title .outline-line{color:transparent;-webkit-text-stroke:1.6px #1d201f;text-stroke:1.6px #1d201f;font-weight:650}
+.reference-hero .hero-lead{max-width:620px;color:#62655f;font-size:16px;line-height:1.7;margin-top:34px}
+.reference-hero .hero-actions{margin-top:30px}
+.reference-hero .btn-ghost{border-color:rgba(0,0,0,.2);color:#111;background:rgba(255,255,255,.38);backdrop-filter:blur(10px)}
+.reference-hero .btn-ghost:hover{background:#fff;border-color:#111}
+.reference-hero .btn-yellow{box-shadow:0 14px 35px rgba(242,194,17,.20)}
+@media(max-width:900px){
+  .reference-hero{min-height:660px}
+  .reference-hero .hero-inner{padding:116px 0 74px}
+  .reference-hero-title{font-size:clamp(68px,13vw,110px)!important;margin-top:54px!important}
+}
+@media(max-width:560px){
+  .reference-hero{min-height:590px;align-items:flex-start}
+  .reference-hero .hero-inner{padding:88px 0 54px}
+  .reference-hero .crumb{margin-bottom:16px}
+  .reference-hero .eyebrow{font-size:9px;letter-spacing:.15em}
+  .reference-hero-title{font-size:clamp(50px,16.7vw,72px)!important;line-height:.81!important;margin:58px 0 22px!important}
+  .reference-hero-title .outline-line{-webkit-text-stroke:1.15px #1d201f}
+  .reference-hero .hero-lead{font-size:14px;max-width:92%;margin-top:26px}
+  .reference-hero .hero-actions{gap:10px;margin-top:24px}
+  .reference-hero .btn{min-height:49px;padding:0 17px}
+}
+
+
+/* Final editorial hero system: reference the visual language, not the reference copy. */
+.reference-hero-title{font-size:clamp(72px,9.4vw,148px)!important;line-height:.82!important;letter-spacing:-.075em!important;max-width:1100px!important}
+.reference-hero-title .solid-line{font-weight:850}
+.reference-hero-title .outline-line{font-weight:650}
+.area-page .reference-hero-title{max-width:1000px!important}
+@media(max-width:900px){.reference-hero-title{font-size:clamp(62px,13vw,108px)!important}}
+@media(max-width:560px){.reference-hero-title{font-size:clamp(52px,16.8vw,76px)!important;line-height:.84!important}}
+
+/* Shared homepage benefit system on all Areas Served pages */
+.area-benefits .section-head{margin-bottom:48px}.area-benefit-grid{background:#101010}.area-benefit-grid .benefit{position:relative;overflow:hidden;transition:transform .45s var(--ease),background .45s var(--ease)}.area-benefit-grid .benefit:hover{background:#191919;transform:translateY(-4px)}.area-benefit-grid .benefit img{width:58px;height:58px;object-fit:contain;filter:grayscale(1) brightness(3);opacity:.92;transition:transform .45s var(--ease),opacity .45s var(--ease)}.area-benefit-grid .benefit:hover img{transform:translateY(-5px) scale(1.06);opacity:1}.area-benefit-grid .benefit h3{margin-top:48px}.zelle-footer{margin-top:0!important}.zelle-footer strong{color:#fff}.footer .payment-image{display:block;max-width:210px;background:#fff;border-radius:8px}

@@ -1,0 +1,188 @@
+/* =========================================================
+   SHARED HOMEPAGE COMPONENTS
+   The Help + Footer components intentionally use the same
+   dimensions, spacing, typography and responsive breakpoints
+   as the homepage.
+========================================================= */
+.shared-home-help{
+  padding:140px 0;
+  background:#0b0c0e;
+  color:#fff;
+}
+.shared-home-help > .container,
+.footer > .container{
+  width:min(calc(100% - 80px),1420px);
+  margin-left:auto;
+  margin-right:auto;
+}
+.shared-home-help .help-head{
+  margin:120px 0 50px;
+  border-top:1px solid #ffffff20;
+  padding-top:35px;
+}
+.shared-home-help .help-head > span{
+  font-size:10px;
+  letter-spacing:.14em;
+  color:#f4c61d;
+  font-weight:700;
+}
+.shared-home-help .help-head h3{
+  font:750 clamp(35px,4.6vw,68px)/1 "Manrope",sans-serif;
+  letter-spacing:-.06em;
+  margin:20px 0;
+}
+.shared-home-help .help-head h3 em{
+  font-style:normal;
+  color:#777;
+}
+.shared-home-help .help-head p{
+  color:#9a9ba0;
+  max-width:620px;
+  line-height:1.7;
+}
+.shared-home-help .benefit-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border:1px solid #ffffff20;
+  border-radius:24px;
+  overflow:hidden;
+}
+.shared-home-help .benefit-grid article{
+  position:relative;
+  padding:34px;
+  min-height:320px;
+  border-right:1px solid #ffffff20;
+  border-bottom:1px solid #ffffff20;
+  background:transparent;
+  transition:transform .45s cubic-bezier(.22,1,.36,1),background .35s ease,box-shadow .45s cubic-bezier(.22,1,.36,1);
+}
+.shared-home-help .benefit-grid article:nth-child(3n){border-right:0}
+.shared-home-help .benefit-grid article:nth-child(n+4){border-bottom:0}
+.shared-home-help .benefit-grid article:hover{
+  background:#151619;
+  transform:translateY(-4px);
+  box-shadow:0 24px 70px rgba(0,0,0,.16);
+  z-index:2;
+}
+.shared-home-help .benefit-grid img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  filter:grayscale(1) brightness(3);
+  opacity:.9;
+  transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .35s ease;
+}
+.shared-home-help .benefit-grid article:hover img{transform:translateY(-5px) scale(1.06);opacity:1}
+.shared-home-help .benefit-grid article > span{
+  position:absolute;
+  right:26px;
+  top:26px;
+  font-size:9px;
+  letter-spacing:.12em;
+  color:#777;
+}
+.shared-home-help .benefit-grid h4{
+  font:700 25px/1.1 "Manrope",sans-serif;
+  letter-spacing:-.04em;
+  margin:50px 0 12px;
+  color:#fff;
+}
+.shared-home-help .benefit-grid p{
+  font-size:13px;
+  line-height:1.7;
+  color:#96979d;
+}
+.shared-home-help .benefit-stat h4 strong{font-size:42px;color:#f4c61d}
+
+/* Exact homepage footer spacing */
+.footer{
+  padding:80px 0 28px;
+  background:#08090a;
+  color:#fff;
+}
+.footer-top{
+  display:grid;
+  grid-template-columns:1.5fr .7fr 1fr 1fr;
+  gap:60px;
+}
+.footer-brand p{
+  max-width:250px;
+  margin-top:20px;
+  color:#8d8e93;
+  font-size:13px;
+}
+.footer-column{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:11px;
+}
+.footer-column > span{
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:#7d7f84;
+  margin-bottom:8px;
+}
+.footer-column a,.footer-column p,.footer-column small{
+  font-size:12px;
+  color:#b3b4b9;
+  line-height:1.6;
+}
+.payment-image{max-width:210px;background:#fff;border-radius:8px}
+.follow-title{margin-top:10px!important}
+.socials{display:flex;gap:8px}
+.socials a{
+  width:34px;height:34px;border-radius:50%;
+  border:1px solid #ffffff20;
+  display:grid;place-items:center;
+}
+.footer-bottom{
+  border-top:1px solid #ffffff18;
+  margin-top:60px;
+  padding-top:24px;
+  display:flex;
+  justify-content:space-between;
+  font-size:10px;
+  letter-spacing:.1em;
+  color:#777;
+}
+.footer .brand{display:flex;align-items:center;gap:10px;flex:none}
+.footer .brand-mark{
+  width:35px;height:35px;border-radius:50%;
+  display:grid;place-items:center;
+  background:#f4c61d;color:#111;
+  font:800 18px/1 "Manrope",sans-serif;
+}
+.footer .brand-text{
+  font:800 14px/1 "Manrope",sans-serif;
+  letter-spacing:-.04em;color:#fff;
+}
+.footer .brand-text span{font-weight:500}
+.zelle-footer{margin-top:0!important}
+.zelle-footer strong{color:#fff}
+
+@media(max-width:1180px){
+  .shared-home-help .benefit-grid{grid-template-columns:repeat(2,1fr)}
+  .shared-home-help .benefit-grid article:nth-child(3n){border-right:1px solid #ffffff20}
+  .shared-home-help .benefit-grid article:nth-child(2n){border-right:0}
+  .shared-home-help .benefit-grid article:nth-child(n+4){border-bottom:1px solid #ffffff20}
+  .shared-home-help .benefit-grid article:nth-child(n+5){border-bottom:0}
+  .footer-top{grid-template-columns:1.2fr 1fr 1fr}
+}
+@media(max-width:980px){
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .shared-home-help{padding:82px 0}
+  .shared-home-help > .container,.footer > .container{width:calc(100% - 28px)}
+  .shared-home-help .benefit-grid{grid-template-columns:1fr}
+  .shared-home-help .benefit-grid article{
+    border-right:0!important;
+    border-bottom:1px solid #ffffff20!important;
+    min-height:260px;
+  }
+  .shared-home-help .benefit-grid article:last-child{border-bottom:0!important}
+  .footer-top{grid-template-columns:1fr;gap:38px}
+  .footer-bottom{flex-direction:column;gap:9px}
+}
